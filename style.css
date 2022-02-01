@@ -13,5 +13,9 @@ a {
 }
 
 .link {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
