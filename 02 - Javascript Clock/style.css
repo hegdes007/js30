@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  background: linear-gradient(to right, #800d00, #fabb33c2);
+}
+
+.clock {
+  background-image: url('./clock-bg.jpg');
+  background-position: center;
+  background-size: 130%;
+  width: 30rem;
+  height: 30rem;
+  margin: 150px auto;
+  border: 10px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .clock {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+
+  .hour-hand {
+    width: 50%;
+    height: 10px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(18deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.36, 1.46, 0.44, 1.51);
+  }
+  .min-hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(124deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.36, 1.46, 0.44, 1.51);
+  }
+  .second-hand {
+    width: 50%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(256deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.36, 1.46, 0.44, 1.51);
+  }
