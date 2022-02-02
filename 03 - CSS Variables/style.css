@@ -1,56 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    background: #193549;
-    color: white;
-    font-family: 'helvetica neue', sans-serif;
-    font-weight: 100;
-    font-size: 5vh;
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 100;
+  font-size: 5vh;
 }
 
 :root {
-    --base: #ffc600;
-    --spacing: 30px;
-    --blur: 3px;
+  --base: #ffc600;
+  --spacing: 30px;
+  --blur: 3px;
 }
 
 img {
-    padding: var(--spacing);
-    background: var(--base);
-    filter: blur(var(--blur));
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
 }
 
 img {
-    width: 65%;
+  width: 65%;
 }
 
 .hl {
-    color: var(--base);
+  color: var(--base);
 }
 
 .controls {
-    margin-top: 10px;
-    margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 input {
-    width: 15vh;
+  width: 15vh;
 }
 
-@media screen and (max-width:768px) {
-    img {
-        width: 95%;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    label {
-	        display:block;
-        font-size: 1.5rem;
-    }
+@media screen and (max-width: 768px) {
+  img {
+    width: 95%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  label {
+    display: block;
+    font-size: 1.5rem;
+  }
 }
