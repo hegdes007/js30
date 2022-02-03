@@ -19,3 +19,8 @@ a {
   align-items: center;
   text-align: center;
 }
+
+.link:hover {
+  background-color: bisque;
+  font-size: 110%;
+}
