@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(231, 231, 231);
+}
+
+.arrays {
+  margin: 1rem;
+}
+
+.questions {
+  margin: 1rem;
+  color: crimson;
+}
+
+.answers {
+  margin: 1rem;
+  color: darkblue;
+}
+
+h4 {
+  color: black;
+}
+
+a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+pre {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
