@@ -32,7 +32,7 @@ function draw(e) {
   if (hue >= 360) {
     hue = 0;
   }
-  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+  if (ctx.lineWidth >= 32 || ctx.lineWidth <= 7) {
     direction = !direction;
   }
 
