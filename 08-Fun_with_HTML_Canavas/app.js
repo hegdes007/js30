@@ -52,11 +52,63 @@ canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
 
-canvas.addEventListener("touchstart", (e) => {
-  isDrawing = true;
-  [lastX, lastY] = [e.offsetX, e.offsetY];
-});
+// ----------------------------------------------------------------------------------- //
 
-canvas.addEventListener("touchmove", draw);
-canvas.addEventListener("touchend", () => (isDrawing = false));
-canvas.addEventListener("touchcancel", () => (isDrawing = false));
+function myFunction(x) {
+  if (x.matches) {
+    canvas.height = 500;
+  }
+}
+var x = window.matchMedia("(max-width: 700px)");
+myFunction(x);
+
+canvas.addEventListener(
+  "touchstart",
+  function (e) {
+    this.down = true;
+    this.X = e.touches[0].pageX;
+    this.Y = e.touches[0].pageY;
+  },
+  0
+);
+
+canvas.addEventListener(
+  "touchend",
+  function () {
+    this.down = false;
+  },
+  0
+);
+
+canvas.addEventListener(
+  "touchcancel",
+  function () {
+    this.down = false;
+  },
+  0
+);
+
+canvas.addEventListener(
+  "touchmove",
+  function (e) {
+    if (this.down) {
+      with (ctx) {
+        strokeStyle = `hsl(${hue}, 100%, 50%)`;
+        lineWidth = 10;
+        lineCap = "round";
+        lineJoin = "round";
+        beginPath();
+        moveTo(this.X, this.Y);
+        lineTo(e.touches[0].pageX, e.touches[0].pageY);
+        stroke();
+        hue++;
+        if (hue >= 360) {
+          hue = 0;
+        }
+      }
+      this.X = e.touches[0].pageX;
+      this.Y = e.touches[0].pageY;
+    }
+  },
+  0
+);
